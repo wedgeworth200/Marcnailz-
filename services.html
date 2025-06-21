@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services - Bob's Salon</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .services {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 100px;
+      padding: 20px;
+    }
+
+    .service-card {
+      background: #fff0f5;
+      border-radius: 15px;
+      padding: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: scale(1.03);
+    }
+
+    .service-card img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 12px;
+    }
+
+    .book-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 18px;
+      background-color: #ff6f91;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .book-btn:hover {
+      background-color: #ff007f;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Our Services</h1>
+    <p>Choose your glow-up!</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="booking.html">Booking</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section class="services">
+    <div class="service-card">
+      <img src="images/images.jpeg" alt="Hair Styling">
+      <h3>Hair Styling</h3>
+      <p>From curls to cuts, we do it all!</p>
+      <a class="book-btn" href="https://wa.me/256753414909?text=I'd%20like%20to%20book%20Hair%20Styling">Book via WhatsApp</a>
+    </div>
+
+    <div class="service-card">
+      <img src="images/images (4).jpeg" alt="Nail Art">
+      <h3>Nail Art</h3>
+      <p>Get your nails styled to perfection 💅</p>
+      <a class="book-btn" href="https://wa.me/256753414909?text=I'd%20like%20to%20book%20Nail%20Art">Book via WhatsApp</a>
+    </div>
+
+    <div class="service-card">
+      <img src="images/kimia-kazemi-u93nTfWqR9w-unsplash.jpg" alt="Facials">
+      <h3>Facials</h3>
+      <p>Pamper your skin with deep cleansing facials.</p>
+      <a class="book-btn" href="https://wa.me/256753414909?text=I'd%20like%20to%20book%20Facials">Book via WhatsApp</a>
+    </div>
+
+    <div class="service-card">
+      <img src="images/images (6).jpeg" alt="Makeup">
+      <h3>Makeup</h3>
+      <p>Glamour makeup for all occasions.</p>
+      <a class="book-btn" href="https://wa.me/256753414909?text=I'd%20like%20to%20book%20Makeup">Book via WhatsApp</a>
+    </div>
+  </section>
+
+  <a href="https://wa.me/256753414909" class="whatsapp-btn">💬 Chat</a>
+  
+  <footer>
+    © 2025 Bob’s Beauty Salon
+  </footer>
+
+</body>
+</html>
+
+  
