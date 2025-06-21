@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Appointment - Bob's Salon</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .confirmation {
+      text-align: center;
+      color: green;
+      font-size: 18px;
+      margin-top: 20px;
+      display: none;
+      animation: pop 1s ease-in-out;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0); opacity: 0; }
+      50% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+
+    .google-form-link {
+      margin-top: 15px;
+      display: block;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .google-form-link a {
+      color: #ff007f;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header><h1>Book Your Appointment</h1></header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="booking.html">Booking</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+    
+    <section id="booking" style="padding: 30px; font-family: 'Poppins', sans-serif; background: #fff5f8;">
+  <h2 style="text-align: center; font-size: 2em; color: #d63384;">📅 Book an Appointment</h2>
+  <p style="text-align: center;">Fill the form or message us on WhatsApp to reserve your spot!</p>
+
+  <form style="max-width: 500px; margin: auto; padding: 20px; background: white; border-radius: 12px; box-shadow: 0 0 12px #f0c1d1;">
+    <label>Name:</label>
+    <input type="text" placeholder="Your Full Name" required style="width: 100%; padding: 10px; margin: 8px 0; border-radius: 8px; border: 1px solid #ccc;">
+
+    <label>Phone:</label>
+    <input type="tel" placeholder="0753414909" required style="width: 100%; padding: 10px; margin: 8px 0; border-radius: 8px; border: 1px solid #ccc;">
+
+    <label>Service:</label>
+    <select required style="width: 100%; padding: 10px; margin: 8px 0; border-radius: 8px; border: 1px solid #ccc;">
+      <option>Haircut</option>
+      <option>Braiding</option>
+      <option>Manicure</option>
+      <option>Facial</option>
+      <option>Pedicure</option>
+    </select>
+
+    <label>Date:</label>
+    <input type="date" required style="width: 100%; padding: 10px; margin: 8px 0; border-radius: 8px; border: 1px solid #ccc;">
+
+    <button type="submit" style="background: #e83e8c; color: white; padding: 12px; border: none; width: 100%; border-radius: 8px;">Book Now</button>
+  </form>
+
+  <div style="text-align: center; margin-top: 20px;">
+    <a href="https://wa.me/256753414909?text=I%20want%20to%20book%20a%20salon%20appointment" target="_blank"
+       style="background: #25D366; color: white; padding: 12px 20px; border-radius: 8px; text-decoration: none;">
+      💬 Book via WhatsApp
+    </a>
+  </div>
+   <div class="google-form-link">
+      ⚠️ Can't use WhatsApp? <br/>
+      👉<a href="https://forms.gle/jxA3PaBb2phvuW8J7" target="_blank">Click here to book via Google Form</a>
+    </div>
+</section>
+  </section>
+
+  <a href="https://wa.me/256753414909" class="whatsapp-btn">Chat on WhatsApp</a>
+  <footer>© 2025 Bob's Beauty Salon</footer>
+
+  <script>
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const service = document.getElementById('service').value;
+      const date = document.getElementById('date').value;
+      const time = document.getElementById('time').value;
+
+      const salonNumber = "256753414909"; // Replace with your real WhatsApp number
+      const message = `Hello, my name is ${name}. I would like to book a ${service} on ${date} at ${time}. My phone number is ${phone}.`;
+
+      const url = `https://wa.me/${salonNumber}?text=${encodeURIComponent(message)}`;
+
+      // Show confirmation message
+      document.getElementById('confirmation').style.display = 'block';
+
+      // Open WhatsApp
+      setTimeout(() => {
+        window.open(url, '_blank');
+      }, 1000);
+    });
+    <section id="booking" style="padding: 30px; font-family: 'Poppins', sans-serif; background: #fff5f8;">
+  <h2 style="text-align: center; font-size: 2em; color: #d63384;">📅 Book an Appointment</h2>
+  <p style="text-align: center;">Fill the form or message us on WhatsApp to reserve your spot!</p>
+
+  <form style="max-width: 500px; margin: auto; padding: 20px; background: white; border-radius: 12px; box-shadow: 0 0 12px #f0c1d1;">
+    <label>Name:</label>
+    <input type="text" placeholder="Your Full Name" required style="width: 100%; padding: 10px; margin: 8px 0; border-radius: 8px; border: 1px solid #ccc;">
+
+    <label>Phone:</label>
+    <input type="tel" placeholder="0753414909" required style="width: 100%; padding: 10px; margin: 8px 0; border-radius: 8px; border: 1px solid #ccc;">
+
+    <label>Service:</label>
+    <select required style="width: 100%; padding: 10px; margin: 8px 0; border-radius: 8px; border: 1px solid #ccc;">
+      <option>Haircut</option>
+      <option>Braiding</option>
+      <option>Manicure</option>
+      <option>Facial</option>
+      <option>Pedicure</option>
+    </select>
+
+    <label>Date:</label>
+    <input type="date" required style="width: 100%; padding: 10px; margin: 8px 0; border-radius: 8px; border: 1px solid #ccc;">
+
+    <button type="submit" style="background: #e83e8c; color: white; padding: 12px; border: none; width: 100%; border-radius: 8px;">Book Now</button>
+  </form>
+
+  <div style="text-align: center; margin-top: 20px;">
+    <a href="https://wa.me/256753414909?text=I%20want%20to%20book%20a%20salon%20appointment" target="_blank"
+       style="background: #25D366; color: white; padding: 12px 20px; border-radius: 8px; text-decoration: none;">
+      💬 Book via WhatsApp
+    </a>
+  </div>
+  <section id="about" class="about" style="opacity:0; transform:translateY(50px); transition:all 1s ease-out;">
+</section>
+  </script>
+</body>
+</html>
