@@ -7,10 +7,15 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #fff0f5;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
     }
 
     header {
@@ -18,6 +23,7 @@
       color: white;
       padding: 80px 20px;
       text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
 
     header h1 {
@@ -40,6 +46,85 @@
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+
+    nav {
+      background: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 24px;
+      color: #8a056d;
+    }
+
+    .logo span {
+      color: #5c15b3;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #444;
+      font-weight: 500;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 30px;
+      background: linear-gradient(135deg, #f6c1d5, #dfb4f0);
+      color: #fff;
+    }
+
+    .hero-text {
+      max-width: 50%;
+    }
+
+    .hero-text h1 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .hero-text span {
+      color: #4c007d;
+    }
+
+    .hero-text p {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    .btn-primary, .btn-secondary {
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-right: 15px;
+    }
+
+    .btn-primary {
+      background-color: #d51f93;
+      color: white;
+    }
+
+    .btn-secondary {
+      background-color: white;
+      color: #d51f93;
     }
 
     .section {
@@ -118,120 +203,36 @@
       background: #fce4ec;
       color: #555;
     }
-    
-}
-.video-container {
-      max-width: 400px;
-      margin: 30px auto;
-      
-      
-      * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-body {
-  background: #f9f9f9;
-}
-
-header {
-  background: white;
-  padding: 15px 30px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-nav {
-  display: flex;
-  justify-content: 1px;
-  align-items: center;
-}
-}
-
-.logo {
-  font-weight: bold;
-  font-size: 24px;
-  color: #8a056d;
-}
-
-.logo span {
-  color: #5c15b3;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-}
-
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #444;
-  font-weight: 500;
-}
-
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 60px 30px;
-  background: linear-gradient(135deg, #f6c1d5, #dfb4f0);
-  color: #fff;
-}
-
-.hero-text {
-  max-width: 50%;
-}
-
-.hero-text h1 {
-  font-size: 40px;
-  margin-bottom: 20px;
-}
-
-.hero-text span {
-  color: #4c007d;
-}
-
-.hero-text p {
-  font-size: 16px;
-  margin-bottom: 30px;
-}
-
-.hero-buttons .btn-primary,
-.hero-buttons .btn-secondary {
-  padding: 10px 20px;
-  margin-right: 15px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.btn-primary {
-  background-color: #d51f93;
-  color: white;
-}
-
-.btn-secondary {
-  background-color: white;
-  color: #d51f93;
-}
-
-.hero-img img {
-  width: 300px;
-}
-    
   </style>
 </head>
 <body>
+
+  <nav>
+    <div class="logo">Bob's <span>Beauty</span></div>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="booking.html">Bookings</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
   <header>
     <h1>Welcome to Bob's Beauty Salon</h1>
     <p>Where your beauty is our passion 💄✨</p>
   </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Experience Beauty <span>Redefined</span></h1>
+      <p>Welcome to Bob’s Beauty Salon, where we transform your look and boost your confidence with our premium beauty services.</p>
+    </div>
+    <div class="hero-img">
+      <img src="images/IMG-20250619-WA0010.jpg" alt="Salon Hero" />
+    </div>
+  </section>
 
   <section class="section" data-aos="fade-up">
     <h2>What We Do Best</h2>
@@ -241,14 +242,14 @@ nav ul li a {
         <p>Gorgeous hair styling & braids</p>
       </div>
       <div class="service" data-aos="zoom-in" data-aos-delay="100">
-        <img src="images/images (5).jpeg" alt="Nails" />
+        <img src="images/images5.jpeg" alt="Nails" />
         <p>Beautiful nails & designs</p>
       </div>
       <div class="service" data-aos="zoom-in" data-aos-delay="200">
         <img src="images/jabari-timothy-IQRHnOraycw-unsplash.jpg" alt="Makeup" />
         <p>Flawless makeup looks</p>
       </div>
-        <div class="service" data-aos="zoom-in" data-aos-delay="200">
+      <div class="service" data-aos="zoom-in" data-aos-delay="300">
         <img src="images/IMG-20250619-WA0010.jpg" alt="All in One" />
         <p>All In One</p>
       </div>
@@ -259,7 +260,7 @@ nav ul li a {
     <h3>Ready to glow? Book your appointment now.</h3>
     <a href="contact.html">Book Now</a>
   </section>
-     
+
   <a href="https://wa.me/256753414909" class="whatsapp-btn">💬</a>
 
   <footer>
@@ -268,26 +269,6 @@ nav ul li a {
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
-
-  <header>
-    <nav>
-      <div class="logo">Bob's <span>Beauty</span></div>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">about</a></li>
-        <li><a href="services.html">services</a></li>
-        <li><a href="gallery.html">gallery</a></li>
-        <li><a href="booking.html">bookings</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    
-  <section class="hero">
-    <div class="hero-text">
-      <h1>Experience Beauty <span>Redefined</span></h1>
-      <p>Welcome to Bob’s Beauty Salon, where we transform your look and boost your confidence with our premium beauty services.</p>
-    </div>
-  </section>
   <script src="script.js"></script>
 </body>
-</html>
+  </html>
